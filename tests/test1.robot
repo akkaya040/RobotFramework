@@ -1,13 +1,19 @@
 *** Settings ***
-Documentation    Suite description
 
-*** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+*** Variables ***
+${username}  akkaya040
 
 *** Keywords ***
-Provided precondition
-    Setup system under test
+ekrana yaz
+    log to console  ${username}
+#Provided precondition
+#    Setup system under test
+*** Test Cases ***
+senaryo 1
+    ekrana yaz
+
+#
+#    [Tags]    DEBUG
+#    Provided precondition
+#    When action
+#    Then check expectations
